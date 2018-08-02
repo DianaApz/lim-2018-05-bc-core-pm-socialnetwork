@@ -115,6 +115,7 @@ function showPublications(postContent,userId,keyPost){
 
     let sectionLike = document.createElement('div');
     let pLike=document.createElement('span');
+    pLike.setAttribute('id', `likecount${keyPost}`);
 
     let btnLike= document.createElement('input');
     btnLike.setAttribute('id', `like${keyPost}`);
@@ -149,8 +150,9 @@ function showPublications(postContent,userId,keyPost){
     let edit = document.getElementById(`edit${keyPost}`);
     let delet = document.getElementById(`delete${keyPost}`);
     let likes = document.getElementById(`like${keyPost}`);
+    let likePoints = document.getElementById(`likecount${keyPost}`);
 
-
+    
     likes.addEventListener('click', () => {
         let userId = firebase.auth().currentUser.uid;
         //const currentPost = document.getElementById(`like${keyPost}`);
@@ -160,7 +162,7 @@ function showPublications(postContent,userId,keyPost){
           const postLike = postRef.val();
           
           const objRefLike = postLike.postWithLikes || [];
-          
+          likePoints.innerHTML=objRefLike.length;
           if (objRefLike.indexOf(userId) === -1) {
             objRefLike.push(userId);
             postLike.likeCount = objRefLike.length;

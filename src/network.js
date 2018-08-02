@@ -33,6 +33,7 @@ function writeNewPost(uid, body) {
 }
 function toggleStar(postRef, uid) {
     postRef.transaction(function(post) {
+      console.log(post)
       if (post) {
         if (post.stars && post.stars[uid]) {
           post.starCount--;

@@ -20,25 +20,28 @@
            <textarea name="publication" id="post" cols="30" rows="10"></textarea>
           <button type="button" value="publicar" id="btnSave" >Publicar</button>
         </div>
-      <div id="posted" >
+      <div>
            <h3>Publicaciones</h3>
+           <div id="posted"></div>
        </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/5.2.0/firebase.js"></script>
-   <script>
-     // Initialize Firebase
-     var config = {
-       apiKey: "AIzaSyBDC5jCsH9YilLHYSnbV_rHdV--wCd__GM",
-       authDomain: "feminismo-d7df2.firebaseapp.com",
-       databaseURL: "https://feminismo-d7df2.firebaseio.com",
-       projectId: "feminismo-d7df2",
-       storageBucket: "feminismo-d7df2.appspot.com",
-       messagingSenderId: "992535526426"
+    
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyCJ1r092HbionqjuAHLbHG7RffF0RAdzyg",
+        authDomain: "practice-firebase-network.firebaseapp.com",
+        databaseURL: "https://practice-firebase-network.firebaseio.com",
+        projectId: "practice-firebase-network",
+        storageBucket: "practice-firebase-network.appspot.com",
+        messagingSenderId: "104543032347"
       };
-     firebase.initializeApp(config);
+      firebase.initializeApp(config);
+    
       // Get a reference to the database service
       var database = firebase.database();
-   </script>
+    </script>
    
     <script src="network.js"></script>
     <script src="perfil.js"></script>

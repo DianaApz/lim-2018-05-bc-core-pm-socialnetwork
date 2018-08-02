@@ -145,10 +145,10 @@ function showPublications(postContent,userId,keyPost){
     publications.appendChild(sectionLike);
     publications.appendChild(sectionButtons);
     
-    let likes = document.getElementById(`like${keyPost}`);
+    
     let edit = document.getElementById(`edit${keyPost}`);
     let delet = document.getElementById(`delete${keyPost}`);
-    
+    let likes = document.getElementById(`like${keyPost}`);
 
 
     likes.addEventListener('click', () => {
@@ -207,3 +207,13 @@ function showPublications(postContent,userId,keyPost){
 function reload_page() {
     window.location.reload();
 }; 
+    
+  
+    
+  
+   
+   
+   
+   
+   
+   
